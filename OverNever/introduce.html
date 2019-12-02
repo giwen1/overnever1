@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+		<script src="./resource/js/redirect.js" type="text/javascript"></script>
+
+		<link href="./resource/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./resource/css/bootstrap-custom.css" rel="stylesheet">
+	</head>
+	<body>
+		<!-- S:Header -->
+		<!-- 헤더, Navbar를 생성합니다. -->
+		<header>
+			<nav class="navbar navbar-light bg-light shadow-sm px-5">
+				<div class="row">
+					<div class="col-8" style="display: grid;">
+						<a href="./index.html" class="navbar-brand">
+							<h4 class="m-0">OverNever</h4>
+						</a>
+					</div>
+				</div>
+				<div class="row p-3">
+					<form class="form-inline">
+						<a href="./about.html" class="btn btn-link rounded-0 text-dark">회사 소개</a>
+						<a href="./service.html" class="btn btn-link rounded-0 mr-3 text-dark">경유지 안내</a>
+						<a href="./login.html" class="btn btn-outline-dark rounded-0">로그인</a>
+					</form>
+				</div>
+			</nav>
+		</header>
+		<!-- E:Header -->
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="recipient-name" class="col-form-label">보내는 사람</label>
+								<input type="text" class="form-control" id="recipient-name">
+							</div>
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">내용</label>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+						<button type="button" class="btn btn-primary">보내기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- S:Main -->
+		<!-- 페이지의 메인 화면을 보입니다. -->
+		<main class="container p-0 m-0" style="max-width:unset" data-spy="scroll" data-target="#spy-list" data-offset="0">
+			<div class="row">
+				<div class="col bg-secondary">
+					<div id="carouselExampleCaptions" class="carousel slide" data-ride="false" style="width:100%; height: calc( 100vh - 142px );">
+						<ol class="carousel-indicators">
+							<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+							<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+							<li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active" style="position: relative; height: calc( 100vh - 142px ); background-image: url('/resource/img/slide-1.jpg'); background-size: cover; background-position: center;">
+								<div class="row align-items-center" style="height: 100%; background: rgba(0, 0, 0, 0.7);">
+									<div class="col text-center">
+										<div class="image-cropper" style="width: 300px; height: 300px">
+											<img src="./resource/img/kim.jpg" style="cursor: pointer" data-target="#exampleModal" data-toggle="modal" data-whatever="김다슬">
+										</div>
+									</div>
+								</div>
+								<div class="carousel-caption d-none d-md-block">
+									<h5>김다슬</h5>
+									<p>한 곳만 여행하기? NO! 난 두 군데 갈 거야!</p>
+								</div>
+							</div>
+							<div class="carousel-item" style="position: relative; height: calc( 100vh - 142px ); background-image: url('/resource/img/slide-2.jpg'); background-size: cover; background-position: center;">
+								<div class="row align-items-center" style="height: 100%; background: rgba(0, 0, 0, 0.7);">
+									<div class="col text-center">
+										<div class="image-cropper" style="width: 300px; height: 300px">
+											<img src="./resource/img/go.jpg" style="cursor: pointer" data-target="#exampleModal" data-toggle="modal" data-whatever="고혜원">
+										</div>
+									</div>
+								</div>
+								<div class="carousel-caption d-none d-md-block">
+									<h5>고혜원</h5>
+									<p>낭만적인 암스테르담으로 함께 가요~!</p>
+								</div>
+							</div>
+							<div class="carousel-item" style="position: relative; height: calc( 100vh - 142px ); background-image: url('/resource/img/slide-3.jpg'); background-size: cover; background-position: center;">
+								<div class="row align-items-center" style="height: 100%; background: rgba(0, 0, 0, 0.7);">
+									<div class="col text-center">
+										<div class="image-cropper" style="width: 300px; height: 300px">
+											<img src="./resource/img/yang.jpg" style="cursor: pointer" data-target="#exampleModal" data-toggle="modal" data-whatever="양지현">
+										</div>
+									</div>
+								</div>
+								<div class="carousel-caption d-none d-md-block">
+									<h5>양지현</h5>
+									<p>세계 무역의 중심지 싱가폴, 저와 함께 하시겠어요?</p>
+								</div>
+							</div>
+							<div class="carousel-item" style="position: relative; height: calc( 100vh - 142px ); background-image: url('/resource/img/slide-4.jpg'); background-size: cover; background-position: center;">
+								<div class="row align-items-center" style="height: 100%; background: rgba(0, 0, 0, 0.7);">
+									<div class="col text-center">
+										<div class="image-cropper" style="width: 300px; height: 300px">
+											<img src="./resource/img/lee.jpg" style="cursor: pointer" data-target="#exampleModal" data-toggle="modal" data-whatever="이지원">
+										</div>
+									</div>
+								</div>
+								<div class="carousel-caption d-none d-md-block">
+									<h5>이지원</h5>
+									<p>1타 2피 여행 저와 함께!</p>
+								</div>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- S:Service -->
+		</main>
+		<!-- E:Main -->
+
+		<!-- S:Footer -->
+		<footer class="navbar navbar-light bg-light">
+			<span class="navbar-text">
+				©2019 by OverNever. Create by Me!
+			</span>
+		</footer>
+		<!-- E:Footer -->
+		
+		<script src="./resource/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+		<script src="./resource/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="./resource/js/popper.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$('#exampleModal').on('show.bs.modal', function (event) {
+				var button = $(event.relatedTarget) // Button that triggered the modal
+				var recipient = button.data('whatever') // Extract info from data-* attributes
+				// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+				// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+				var modal = $(this)
+				modal.find('.modal-title').text('New message to ' + recipient)
+				modal.find('.modal-body input').val(recipient)
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+.image-cropper {
+	width: 500px;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: auto;
+}
+
+.image-cropper img {
+	display: inline;
+	margin: 0 auto;
+	height: 100%;
+	width: auto;
+}
+
+.image-cropper-2 {
+	position: relative;
+	overflow: hidden;
+	margin: auto;
+}
+
+.image-cropper-2 img {
+	display: inline;
+	margin: 0 auto;
+	height: 100%;
+	width: auto;
+}
+
+body {
+	overflow-x:hidden;
+}
+
+.about-body {
+	position: relative;
+	overflow: auto;
+	height: calc( 100vh - 142px );
+	padding-top: 1rem;
+}
+
+nav.nav a.nav-link.active {
+	color: #ffc107!important;
+}
+
+/*
+##Device = Desktops
+##Screen = 1281px to higher resolution desktops
+##Device = 데스크탑
+##Screen = 1281px 이상 해상도 데스크탑
+*/
+
+@media (min-width: 1281px) {
+	.about-body {
+		padding-right: 30%;
+		padding-left: 10%;
+	}
+}
+
+/*
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+##Device = 랩탑, 데스크탑
+##Screen = 1025px에서 1280px 사이
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+	.about-body {
+		padding-right: 20%;
+	}
+}
+
+/*
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+##Device = 태블릿, 아이패드(가로)
+##Screen = 768px에서 1024px 사이
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	.about-body {
+		padding-right: 10%;
+	}
+	.image-cropper img {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+##Device = 저해상도 태블릿, 모바일(가로)
+##Screen = 481px에서 767px 사이
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.about-body {
+		padding-right: 0;
+	}
+	.image-cropper img {
+		width: 300px;
+		height: 300px;
+	}
+}
